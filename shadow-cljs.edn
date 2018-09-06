@@ -1,0 +1,10 @@
+{:lein   true
+ :builds {:app {:output-dir "resources/public/js"
+                :asset-path "/js"
+                :target     :browser
+                :modules    {:app {:entries [shadow-clj-lein.index]}}
+                :devtools   {:http-port    8080
+                             :http-root    "resources/public"
+                             :watch-dir    "resources/public"
+                             :after-load   shadow-clj-lein.index/reload!
+                             :repl-init-ns shadow-clj-lein.index}}}}
